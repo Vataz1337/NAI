@@ -1,0 +1,4 @@
+C:\C++\cmake-3.24.2-windows-x86_64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "D:\Desktop\Studia\Semestr 5\NAI\lab1"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Desktop/Studia/Semestr 5/NAI/lab1/cmake-build-debug
