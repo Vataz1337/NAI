@@ -19,15 +19,17 @@ int main(int argc, char **argv) {
     options["mod"] = [](int x, int y) { return x % y; };
     options["sin"] = [](int x, int y=0) { return sin(x); };
 try {
-    printValues(options[list.at(1)], stoi(list.at(2)), stoi(list.at(3)));
-} catch (out_of_range ofr){
-    if(argc == 3){
+    if (list.at(1)=="sin") {
         printValues(options[list.at(1)], stoi(list.at(2)));
+    } else if (list.at(1)=="add" || list.at(1)=="mod") {
+        printValues(options[list.at(1)], stoi(list.at(2)), stoi(list.at(3)));
     }else{
-        cout << "Wybierz jedna z trzech opcji: add, mod lub sin." << endl;
+        cout << "1.Wybierz jedna z trzech opcji: add, mod lub sin." << endl;
     }
+}catch (out_of_range ofr){
+    cout << "2.Wybierz jedna z trzech opcji: add, mod lub sin." << endl;
 } catch (bad_function_call bfc) {
-    cout << "Wybierz jedna z trzech opcji: add, mod lub sin." << endl;
+    cout << "3.Wybierz jedna z trzech opcji: add, mod lub sin." << endl;
 }
     return 0;
 }

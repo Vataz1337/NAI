@@ -128,30 +128,6 @@ lab1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make CMakeFiles/lab1.dir/build
 .PHONY : lab1/fast
 
-januszPrzyklad.obj: januszPrzyklad.cpp.obj
-.PHONY : januszPrzyklad.obj
-
-# target to build an object file
-januszPrzyklad.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make CMakeFiles/lab1.dir/januszPrzyklad.cpp.obj
-.PHONY : januszPrzyklad.cpp.obj
-
-januszPrzyklad.i: januszPrzyklad.cpp.i
-.PHONY : januszPrzyklad.i
-
-# target to preprocess a source file
-januszPrzyklad.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make CMakeFiles/lab1.dir/januszPrzyklad.cpp.i
-.PHONY : januszPrzyklad.cpp.i
-
-januszPrzyklad.s: januszPrzyklad.cpp.s
-.PHONY : januszPrzyklad.s
-
-# target to generate assembly for a file
-januszPrzyklad.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make CMakeFiles/lab1.dir/januszPrzyklad.cpp.s
-.PHONY : januszPrzyklad.cpp.s
-
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -176,30 +152,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make CMakeFiles/lab1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-przyklad.obj: przyklad.cpp.obj
-.PHONY : przyklad.obj
-
-# target to build an object file
-przyklad.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make CMakeFiles/lab1.dir/przyklad.cpp.obj
-.PHONY : przyklad.cpp.obj
-
-przyklad.i: przyklad.cpp.i
-.PHONY : przyklad.i
-
-# target to preprocess a source file
-przyklad.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make CMakeFiles/lab1.dir/przyklad.cpp.i
-.PHONY : przyklad.cpp.i
-
-przyklad.s: przyklad.cpp.s
-.PHONY : przyklad.s
-
-# target to generate assembly for a file
-przyklad.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make CMakeFiles/lab1.dir/przyklad.cpp.s
-.PHONY : przyklad.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -209,15 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... lab1
-	@echo ... januszPrzyklad.obj
-	@echo ... januszPrzyklad.i
-	@echo ... januszPrzyklad.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... przyklad.obj
-	@echo ... przyklad.i
-	@echo ... przyklad.s
 .PHONY : help
 
 

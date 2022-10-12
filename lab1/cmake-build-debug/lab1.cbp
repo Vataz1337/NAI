@@ -82,13 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Desktop/Studia/Semestr 5/NAI/lab1/januszPrzyklad.cpp">
-			<Option target="lab1"/>
-		</Unit>
 		<Unit filename="D:/Desktop/Studia/Semestr 5/NAI/lab1/main.cpp">
-			<Option target="lab1"/>
-		</Unit>
-		<Unit filename="D:/Desktop/Studia/Semestr 5/NAI/lab1/przyklad.cpp">
 			<Option target="lab1"/>
 		</Unit>
 		<Unit filename="D:/Desktop/Studia/Semestr 5/NAI/lab1/CMakeLists.txt">
