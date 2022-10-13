@@ -1,7 +1,6 @@
 #include <iostream>
 #include <map>
 #include <functional>
-#include <utility>
 #include <vector>
 #include <string>
 #include <cmath>
@@ -20,7 +19,11 @@ int main(int argc, char **argv) {
     options["sin"] = [](vector<double>numbers) { return sin(numbers.front()); };
 try {
     vector<string> list(argv, argc + argv);
-    vector<double> numberes = {{stod(list.at(2)), stod(list.at(3))}};
+//    vector<double> numberes = {{stod(list.at(2)), stod(list.at(3))}};
+    vector<double> numberes;
+    for(int i = 2; i<argc; i++){
+        numberes.push_back(stod(list.at(i)));
+    }
     printValues(numberes, options.at(list.at(1)));
 }
 catch (out_of_range ofr){
