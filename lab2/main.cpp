@@ -48,7 +48,7 @@ int main(int argc, char** argv){
         if(-5>values.front() || values.front()>5 || -5>values.back() || values.back()>5) throw invalid_argument("Input x value must be higher of equal -5 and y value must be 5 or lower.");
         return pow((pow(values.front(), 2) + (values.back()) + 11), 2) + pow((values.front() + pow(values.back(), 2) - 7), 2);};
     funcMap["MatyasFunction"] = [](vector<double> values){
-        if(-5>values.front() || values.front()>5 || -5>values.back() || values.back()>5) throw invalid_argument("Input x value must be higher of equal -10 and y value must be 10 or lower.");
+        if(-10>values.front() || values.front()>10 || -10>values.back() || values.back()>10) throw invalid_argument("Input x value must be higher of equal -10 and y value must be 10 or lower.");
         return 0.26*(pow(values.front(), 2) + pow(values.back(), 2)) - 0.48 * (values.front() * values.back());};
     try{
         vector<double> results {bruteforce(funcMap.at(inputValues.at(1)), {stod(inputValues.at(2)), stod(inputValues.at(3)), stod(inputValues.at(4)), stod(inputValues.at(5)), stod(inputValues.at(6))})};

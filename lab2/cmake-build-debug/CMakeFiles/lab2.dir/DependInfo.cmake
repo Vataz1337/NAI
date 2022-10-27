@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/s23205/Downloads/nai/NAI/lab2/main.cpp" "CMakeFiles/lab2.dir/main.cpp.obj" "gcc" "CMakeFiles/lab2.dir/main.cpp.obj.d"
+  "D:/Desktop/Studia/Semestr 5/NAI/lab2/main.cpp" "CMakeFiles/lab2.dir/main.cpp.obj" "gcc" "CMakeFiles/lab2.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.

@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.23"
+						"string" : "3.24"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "lab2",
+					"name" : "lab3",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "lab2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-lab2-Debug-7f326fc288e3a470287e.json",
-					"name" : "lab2",
+					"id" : "lab3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lab3-Debug-5b213c6cb6cf3a704c35.json",
+					"name" : "lab3",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/s23205/Downloads/nai/NAI/lab2/cmake-build-debug",
-		"source" : "C:/Users/s23205/Downloads/nai/NAI/lab2"
+		"build" : "D:/Desktop/Studia/Semestr 5/NAI/lab3/cmake-build-debug",
+		"source" : "D:/Desktop/Studia/Semestr 5/NAI/lab3"
 	},
 	"version" : 
 	{
