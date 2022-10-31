@@ -15,10 +15,10 @@ using myFunction2 = function<vector<double>(function<double(vector<double>)>,dom
 random_device randomDevice;
 mt19937 mtGenerator(randomDevice());
 
+//function that return our final vector with results
 vector<double> finalResult(const myFunction2& func,
                  vector<string> inputFromUser,
-                 const map<string, myFunction>& map1,
-                 const map<string, myFunction2>& map2){
+                 const map<string, myFunction>& map1){
     string execFunctionName = inputFromUser.at(1);
     string mathFunctionName = inputFromUser.at(2);
     double xMin = stod(inputFromUser.at(3));
@@ -30,27 +30,28 @@ vector<double> finalResult(const myFunction2& func,
     return points;
 }
 
+
 int main(int argc, char** argv){
     //input:
     vector<string> inputValues(argv, argc + argv);
     //mathFunctions:
     map<string, myFunction> mathFuncMap;
-    mathFuncMap["BoothFunction"] = [](vector<double> values){
-        if(-10>values.front() || values.front()>10 || -10>values.back() || values.back()>10) throw invalid_argument("Input x value must be higher of equal -10 and y value must be 10 or lower.");
+    mathFuncMap["BoothFunction"] = [](domainVector values){
+        if(-10>values.front() || values.front()>10 || -10>values.back() || values.back()>10) throw invalid_argument("Inputs x,y values must be higher or equal -10 and equal or lower than 10");
         return pow((values.front() + (2 * (values.back())) - 7), 2) + pow(((2 * values.front()) + values.back() - 5), 2);};
-    mathFuncMap["HimmelblauFunction"] = [](vector<double> values){
-        if(-5>values.front() || values.front()>5 || -5>values.back() || values.back()>5) throw invalid_argument("Input x value must be higher of equal -5 and y value must be 5 or lower.");
+    mathFuncMap["HimmelblauFunction"] = [](domainVector values){
+        if(-5>values.front() || values.front()>5 || -5>values.back() || values.back()>5) throw invalid_argument("Inputs x,y values must be higher or equal -5 and equal or lower than 5");
         return pow(((pow(values.front(), 2)) + (values.back()) + 11), 2) + pow((values.front() + (pow(values.back(), 2)) - 7), 2);};
-    mathFuncMap["MatyasFunction"] = [](vector<double> values){
-        if(-10>values.front() || values.front()>10 || -10>values.back() || values.back()>10) throw invalid_argument("Input x value must be higher of equal -10 and y value must be 10 or lower.");
+    mathFuncMap["MatyasFunction"] = [](domainVector values){
+        if(-10>values.front() || values.front()>10 || -10>values.back() || values.back()>10) throw invalid_argument("Inputs x,y values must be higher or equal -10 and equal or lower than 10");
         return 0.26*(pow(values.front(), 2) + pow(values.back(), 2)) - 0.48 * (values.front() * values.back());};
-    mathFuncMap["Bealefunction"] = [](vector<double> values) {
-        if (-5 > values.front() || values.front() > 4.5 || -4.5 > values.back() || values.back() > 5)
-            throw invalid_argument("Input x value must be higher of equal -10 and y value must be 10 or lower.");
+    mathFuncMap["Bealefunction"] = [](domainVector values) {
+        if (-4.5 > values.front() || values.front() > 4.5 || -4.5 > values.back() || values.back() > 4.5)
+            throw invalid_argument("Inputs x,y values must be higher or equal -4.5 and equal or lower than 4.5");
         return pow(1.5 - values.front() + (values.front() * values.back()), 2) +
                pow(2.25 - values.front() + pow(values.front() * values.back(), 3), 2) +
                pow(2.625 - values.front() + (pow(values.front() * values.back(), 3)), 2);};
-    //Functions that look for lowest points:
+    //Functions that look for lowest points randomly:
     map<string, myFunction2>executionFuncMap;
     executionFuncMap["BruteForce"] = [](const function<double(vector<double>)>& func, domainVector domain){
         double lowestValue = numeric_limits<double>::max();
@@ -75,16 +76,41 @@ int main(int argc, char** argv){
         }
         return finalValues;
     };
+    executionFuncMap["Climb"] = [](const function<double(vector<double>)>& func, domainVector domain){
+        double xLowestDomainValue = domain.at(0);
+        double xHighestDomainValue = domain.at(1);
+        double yLowestDomainValue = domain.at(2);
+        double yHighestDomainValue = domain.at(3);
+        double iterations = domain.at(4);
+        uniform_real_distribution<double> x(xLowestDomainValue, xHighestDomainValue);
+        uniform_real_distribution<double> y(yLowestDomainValue,yHighestDomainValue);
+        domainVector current_p = {x(mtGenerator), y(mtGenerator)};
+        domainVector new_p;
+        for(int i = 0; i < iterations; i++){
+            uniform_real_distribution<double> dist(-1.0/128.0, 1.0/128);
+            double newX = current_p[0] + dist(mtGenerator);
+            double newY = current_p[1] + dist(mtGenerator);
+            if(xLowestDomainValue > newX || xHighestDomainValue < newX || yLowestDomainValue > newY || yHighestDomainValue < newY){
+            }else{
+                new_p = {newX, newY};
+                if(func(current_p) > func(new_p)){
+                    current_p = new_p;
+                }
+            }
+        }
+        domainVector finalValues;
+        finalValues.clear();
+        finalValues.push_back(current_p.at(0));
+        finalValues.push_back(current_p.at(1));
+        finalValues.push_back(func(current_p));
+        return finalValues;
+    };
+    executionFuncMap["Annealing"] = [](const function<double(vector<double>)>& func, domainVector domain){
+        return domain;
+    };
     try{
-        string execFunctionName = inputValues.at(1);
-        string mathFunctionName = inputValues.at(2);
-        string xMin = inputValues.at(3);
-        string xMax = inputValues.at(4);
-        string yMin = inputValues.at(5);
-        string yMax = inputValues.at(6);
-        string iterations = inputValues.at(6);
-
-      vector<double> results = finalResult(executionFuncMap.at(inputValues.at(1)), inputValues, mathFuncMap, executionFuncMap);
+        //create vector with results for selected math function and execution function
+      vector<double> results = finalResult(executionFuncMap.at(inputValues.at(1)), inputValues, mathFuncMap);
         cout << "x: " << results[0] << endl;
         cout << "y: " << results[1] << endl;
         cout << "Lowest found value: " << results[2] << endl;
