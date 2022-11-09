@@ -4,7 +4,7 @@
 #include <string>
 #include <random>
 #include <functional>
-#include <math.h>
+#include <cmath>
 
 # define M_PI           3.14159265358979323846  /* pi */
 
@@ -151,9 +151,10 @@ int main(int argc, char** argv){
         domainVector current_p = {x, y};
         double currentResult = func(current_p);
         uniform_real_distribution<double> randomiser(0, 1);
-        uniform_real_distribution<double> step(-1.0 / 64, 1.0 / 64);
+        uniform_real_distribution<double> step(-1.0 / 128, 1.0 / 128);
         domainVector newPoints;
-        for(double k=1.0;k<iterations;k+=1){
+//        domainVector v = {currentResult};
+        for(int k=1;k<iterations;k+=1){
             double modifier = step(mtGenerator);
             double a = x + modifier;
             double b = y + modifier;
@@ -165,8 +166,8 @@ int main(int argc, char** argv){
                 y = b;
             }else{
                 double modifier2 = randomiser(mtGenerator);
-                double Tk = 1.0/k;
-                if(modifier2 < exp(-1 * (abs(newResult - currentResult) / Tk))){
+                double Tk = 1.0/log(k);
+                if(modifier2 < exp(-1 * (fabs(newResult - currentResult) / Tk))){
                     currentResult = newResult;
                     x = a;
                     y = b;
@@ -185,6 +186,7 @@ int main(int argc, char** argv){
     };
     try{
         //create vector with results for selected math function and execution function
+        //results = finalResult(executionFuncMap.at(inputValues.at(1)), inputValues, mathFuncMap);
         cout << inputValues.at(2) << endl;
         cout << "-------------------------------------------------------------------------------------------------------" << endl;
         cout << "BruteForce:" << endl;
