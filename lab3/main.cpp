@@ -150,14 +150,13 @@ int main(int argc, char** argv){
         double y = disty(mtGenerator);
         domainVector current_p = {x, y};
         double currentResult = func(current_p);
-        uniform_real_distribution<double> randomiser(0, 1);
+        normal_distribution<double> randomiser(0, 1);
         uniform_real_distribution<double> step(-1.0 / 128, 1.0 / 128);
         domainVector newPoints;
 //        domainVector v = {currentResult};
         for(int k=1;k<iterations;k+=1){
-            double modifier = step(mtGenerator);
-            double a = x + modifier;
-            double b = y + modifier;
+            double a = x + step(mtGenerator);
+            double b = y + step(mtGenerator);
             newPoints = {a, b};
             double newResult = func(newPoints);
             if(currentResult>=newResult){

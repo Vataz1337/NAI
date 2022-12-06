@@ -13,11 +13,6 @@ bool generateRandomBool(){
     return uniform_int_distribution<>{0, 1}(rng);
 }
 
-int add_randomness(){
-    mt19937 rng(std::random_device{}());
-    return uniform_int_distribution<>{-1, 1}(rng);
-}
-
 int genotype_length(int index){
     int length = 100 + (index % 10) * 2;
     return length;
@@ -60,8 +55,17 @@ vector<double> genotype_into_fenotype(const vector<int>& bits, int length = 110)
             }
         }
     }
-    fenotype.push_back(binaryToDecimal(add_randomness() * stoi(x)));
-    fenotype.push_back(binaryToDecimal(add_randomness() * stoi(y)));
+    if(x.at(0)=='1'){
+        fenotype.push_back(binaryToDecimal(stoi(x)));
+    }else{
+        fenotype.push_back(binaryToDecimal(-1 * stoi(x)));
+    }if(x.at(0)=='1'){
+        fenotype.push_back(binaryToDecimal(stoi(y)));
+    }else{
+        fenotype.push_back(binaryToDecimal(-1 * stoi(y)));
+    }
+
+
     return fenotype;
 }
 
@@ -82,10 +86,11 @@ double beale_function(double x, double y){
         return numeric_limits<double>::max();
     }
     return pow(1.5 - x + (x * y, 2) +
-           pow(2.25 - x + x * y, 3), 2) +
+               pow(2.25 - x + x * y, 3), 2) +
            pow(2.625 - x + (pow(x * y, 3)), 2);
 }
 
+///-5 <= x, <= 5
 double himmelblau_function(double x, double y){
     if(-5>x || x>5 || -5>y || y>5){
         return numeric_limits<double>::max();
@@ -93,37 +98,48 @@ double himmelblau_function(double x, double y){
     return pow(pow(x,2)+y-11,2) + pow(x+pow(y,2)-7,2);
 }
 
+//int calculate_chances(double individual){
+//
+//}
+//
+//map<double, vector<double>> fitness(int ammount, const function<double(double , double )>& fun){
+//    vector<double> population = populate(ammount);
+////    map<double, vector<double>> resultsMap;
+//    vector<double> results;
+//    for(int i = 0; i < population.size(); i+=2){
+//        double result = fun(population[i], population[i + 1]);
+//        if(result != numeric_limits<double>::max() && check_if_contains(result, results)){
+//            results.push_back(result);
+//            resultsMap[result] = {population[i],population[i+1]};
+//            cout << "wynik:" << result << " x:" << population[i] << " y:" << population[i+1] << endl;
+//        }
+//    }
+//    return resultsMap;
+//}
 
-bool check_if_contains(double number, const vector<double>& list){
-    for(double i : list){
-        if(i == number){
-            return false;
-        }
-    }
-    return true;
+int main() {
+    vector<double> population = populate(100);
+
+    return 0;
 }
 
-map<double, vector<double>> fitness(int ammount, const function<double(double , double )>& fun){
-    vector<double> population = populate(ammount);
-    map<double, vector<double>> resultsMap;
-    vector<double> results;
-    for(int i = 0; i < population.size(); i+=2){
-        double result = fun(population[i], population[i + 1]);
-        if(result != numeric_limits<double>::max() && check_if_contains(result, results)){
-            results.push_back(result);
-            resultsMap[result] = {population[i],population[i+1]};
-            cout << "wynik:" << result << " x:" << population[i] << " y:" << population[i+1] << endl;
-        }
-    }
-    return resultsMap;
-}
-
+//bool check_if_contains(double number, const vector<double>& list){
+//    for(double i : list){
+//        if(i == number){
+//            return false;
+//        }
+//    }
+//    return true;
+//}
 //map<double, vector<double>> sortByKey(map<double, vector<double>> inputMap, int amount){
 //    map<double, vector<double>> returnMap;
 //    for(int i = 0 ; i < amount ; i++){
 //        map<double, vector<double>>::iterator pointer = inputMap.begin();
 //        for(map<double, vector<double>>::iterator it = inputMap.begin(); it != inputMap.end() ; it.operator++()){
-//            if(pointer -> first > it -> first) pointer = it;
+//            if(pointer -> first > it -> first){
+//                pointer = it;
+//                inputMap.erase(pointer->first);
+//            }
 //        }
 //        returnMap[pointer -> first] = pointer -> second;
 //    }
@@ -132,15 +148,11 @@ map<double, vector<double>> fitness(int ammount, const function<double(double , 
 //
 //void printMap(const map<double, vector<double>>& inputMap){
 //    map<double, vector<double>>::iterator itr;
-//    for(itr = inputMap.begin();itr!=inputMap.end();itr++){
-//    cout<<itr->first<<" "<<itr->second<<endl;
+//    for(auto [a, b]:inputMap){
+//    cout<<a<<" "<<a<<endl;
 //    }
 //}
-
-
-int main() {
-    map<double, vector<double>> resultsMap = fitness(100, himmelblau_function);
-//    sortByKey(resultsMap, 10);
-
-    return 0;
-}
+//int add_randomness(){
+//    mt19937 rng(std::random_device{}());
+//    return uniform_int_distribution<>{-1, 1}(rng);
+//}
