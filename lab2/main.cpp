@@ -44,17 +44,25 @@ int main(int argc, char** argv){
     funcMap["BoothFunction"] = [](vector<double> values){
         if(-10>values.front() || values.front()>10 || -10>values.back() || values.back()>10) throw invalid_argument("Input x value must be higher of equal -10 and y value must be 10 or lower.");
         return pow((values.front() + 2 * (values.back()) - 7), 2) + pow((2 * (values.front()) + values.back() - 5), 2);};
-    funcMap["HimmelblauFunction"] = [](vector<double> values){
-        if(-5>values.front() || values.front()>5 || -5>values.back() || values.back()>5) throw invalid_argument("Input x value must be higher of equal -5 and y value must be 5 or lower.");
-        return pow((pow(values.front(), 2) + (values.back()) + 11), 2) + pow((values.front() + pow(values.back(), 2) - 7), 2);};
+    funcMap["Beale"] = [](vector<double> values){
+        if(-4.5>values.front() || values.front()>4.5 || -4.5>values.back() || values.back()>4.5) throw invalid_argument("Input x value must be higher of equal -5 and y value must be 5 or lower.");
+        return pow(1.5 - values.at(0) + values.at(0) * values.at(1), 2) +
+               pow(2.25 - values.at(0) + values.at(0) * pow(values.at(1), 2),2) +
+               pow(2.625 - values.at(0) + values.at(0) *  pow(values.at(1), 3), 2);};
     funcMap["MatyasFunction"] = [](vector<double> values){
         if(-10>values.front() || values.front()>10 || -10>values.back() || values.back()>10) throw invalid_argument("Input x value must be higher of equal -10 and y value must be 10 or lower.");
         return 0.26*(pow(values.front(), 2) + pow(values.back(), 2)) - 0.48 * (values.front() * values.back());};
     try{
-        vector<double> results {bruteforce(funcMap.at(inputValues.at(1)), {stod(inputValues.at(2)), stod(inputValues.at(3)), stod(inputValues.at(4)), stod(inputValues.at(5)), stod(inputValues.at(6))})};
-        cout << "x: " << results[0] << endl;
-        cout << "y: " << results[1] << endl;
-        cout << "Lowest found value: " << results[2] << endl;
+        domainVector forAvarage;
+        for(int i = 0; i < 20; i++){
+            vector<double> results {bruteforce(funcMap.at(inputValues.at(1)), {stod(inputValues.at(2)), stod(inputValues.at(3)), stod(inputValues.at(4)), stod(inputValues.at(5)), stod(inputValues.at(6))})};
+            cout << "x: " << results[0] << endl;
+            cout << "y: " << results[1] << endl;
+            cout << "Lowest found value: " << results[2] << endl;
+            forAvarage.push_back(results[2]);
+        }
+        double sum = std::accumulate(forAvarage.begin(), forAvarage.end(), 0.0);
+        cout << "Out of 20 test avarage is: " << sum/forAvarage.size();
     }catch(out_of_range e) {
         cout << "Available functions:" << endl;
         cout << "Matyas function(-10<=x,y<10)" << endl;

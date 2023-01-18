@@ -15,7 +15,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/addr2line.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/addr2line.exe"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -31,7 +31,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/ar.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/ar.exe"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/Desktop/Studia/Semestr 5/NAI/lab2/cmake-build-debug"
+			"value" : "c:/Users/patry/OneDrive/Pulpit/Studia/Semestr5/NAI/lab1/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "24"
+			"value" : "23"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/C++/cmake-3.24.2-windows-x86_64/bin/cmake.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/cmake/win/bin/cmake.exe"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -167,7 +167,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/C++/cmake-3.24.2-windows-x86_64/bin/cpack.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/cmake/win/bin/cpack.exe"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -179,7 +179,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/C++/cmake-3.24.2-windows-x86_64/bin/ctest.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/cmake/win/bin/ctest.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -195,7 +195,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/g++.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/g++.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -211,7 +211,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/gcc-ar.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -227,7 +227,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/gcc-ranlib.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -339,7 +339,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/gcc.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/gcc.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -355,7 +355,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/gcc-ar.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -371,7 +371,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/gcc-ranlib.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -483,7 +483,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/dlltool.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/dlltool.exe"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -611,7 +611,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++;D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32;D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward;D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include;D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include;D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++;C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32;C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward;C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include;C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include;C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"
 		},
 		{
 			"name" : "CMAKE_EXTRA_GENERATOR_C_SYSTEM_DEFINED_MACROS",
@@ -635,19 +635,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include;D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include;D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"
-		},
-		{
-			"name" : "CMAKE_FIND_PACKAGE_REDIRECTS_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake."
-				}
-			],
-			"type" : "STATIC",
-			"value" : "D:/Desktop/Studia/Semestr 5/NAI/lab2/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include;C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include;C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -719,7 +707,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Desktop/Studia/Semestr 5/NAI/lab2"
+			"value" : "C:/Users/patry/OneDrive/Pulpit/Studia/Semestr5/NAI/lab1"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -731,7 +719,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/lab2"
+			"value" : "C:/Program Files (x86)/lab1"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -747,7 +735,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/ld.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/ld.exe"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
@@ -763,7 +751,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe"
+			"value" : "C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -859,7 +847,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/nm.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/nm.exe"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -887,7 +875,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/objcopy.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/objcopy.exe"
 		},
 		{
 			"name" : "CMAKE_OBJDUMP",
@@ -903,7 +891,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/objdump.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/objdump.exe"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -951,7 +939,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "lab2"
+			"value" : "lab1"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -967,7 +955,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/ranlib.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER",
@@ -983,7 +971,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/windres.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/windres.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER_WORKS",
@@ -1091,7 +1079,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/readelf.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/readelf.exe"
 		},
 		{
 			"name" : "CMAKE_ROOT",
@@ -1103,7 +1091,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/C++/cmake-3.24.2-windows-x86_64/share/cmake-3.24"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/cmake/win/share/cmake-3.23"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1311,7 +1299,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Desktop/Studia/Semestr 4/SystemyOperacyjne/CLion 2021.3.3/bin/mingw/bin/strip.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/strip.exe"
 		},
 		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
@@ -1330,19 +1318,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "linker supports push/pop state"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "TRUE"
-		},
-		{
-			"name" : "lab2_BINARY_DIR",
+			"name" : "lab1_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1351,10 +1327,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Desktop/Studia/Semestr 5/NAI/lab2/cmake-build-debug"
+			"value" : "C:/Users/patry/OneDrive/Pulpit/Studia/Semestr5/NAI/lab1/cmake-build-debug"
 		},
 		{
-			"name" : "lab2_IS_TOP_LEVEL",
+			"name" : "lab1_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1366,7 +1342,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "lab2_SOURCE_DIR",
+			"name" : "lab1_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1375,7 +1351,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Desktop/Studia/Semestr 5/NAI/lab2"
+			"value" : "C:/Users/patry/OneDrive/Pulpit/Studia/Semestr5/NAI/lab1"
 		}
 	],
 	"kind" : "cache",
