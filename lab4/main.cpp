@@ -250,26 +250,27 @@ Data two_point_crossover(const Data& parent1,const Data& parent2, int cross_poin
 }
 
 vector<Data> tournament(const vector<Data>& data, int group_size, int number_of_winners) {
-    cout << "Tournament" << endl;
+    cout << endl << "Tournament" << endl;
     vector<Data> winners;
     vector<Data> group;
     vector<int> used;
     int counter = 0;
     while(winners.size() < number_of_winners){
         Data biggest;
+        biggest.result = 0;
+        biggest.population = {};
+        biggest.allBits = {};
         group.clear();
-        used.clear();
         while(group.size() < group_size) {
-            uniform_int_distribution<int> distribution(0, int(data.size()));
+            uniform_int_distribution<int> distribution(0, int(data.size())-1);
+//            int sizeInmp = int(data.size()) - 1;
+//            cout << endl << "Impostor: " << sizeInmp << endl;
             int random_element_group = distribution(rng);
             if (find(used.begin(), used.end(), random_element_group) == used.end()) {
                 used.push_back(random_element_group);
                 group.push_back(data.at(random_element_group));
             }
         }
-        biggest.result = 0;
-        biggest.population = {};
-        biggest.allBits = {};
         for(int i = 0; i < group_size; i++){
             counter++;
             Data temp = group.at(i);
@@ -293,7 +294,7 @@ int main() {
     printChromos(uniform_mutation(sorted[0], 5).allBits);
     cross_mutation(sorted[0], sorted[1]);
     two_point_crossover(sorted[0], sorted[1], 2,10);
-    print_results(tournament(sortedArray, 5, 10));
+    print_results(tournament(fitness(populate(1000)), 5, 10));
 //    cout << beale_function(1.15254, -1.11111);
     ///99992.8
     return 0;
