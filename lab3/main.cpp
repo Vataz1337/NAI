@@ -5,6 +5,7 @@
 #include <random>
 #include <functional>
 #include <cmath>
+#include <ctime>
 
 # define M_PI           3.14159265358979323846  /* pi */
 
@@ -58,7 +59,7 @@ int main(int argc, char** argv){
         if(-10>values.front() || values.front()>10 || -10>values.back() || values.back()>10) throw invalid_argument("Inputs x,y values must be higher or equal -10 and equal or lower than 10");
         return pow((values.front() + (2 * (values.back())) - 7), 2) + pow(((2 * values.front()) + values.back() - 5), 2);};
     mathFuncMap["Himmelblau_function"] = [](domainVector values){
-        if(-5>values.front() || values.front()>5 || -5>values.back() || values.back()>5) throw invalid_argument("Inputs x,y values must be higher or equal -5 and equal or lower than 5");
+//        if(-5>values.front() || values.front()>5 || -5>values.back() || values.back()>5) throw invalid_argument("Inputs x,y values must be higher or equal -5 and equal or lower than 5");
         return pow(pow(values.at(0),2)+values.at(1)-11,2) + pow(values.at(0)+pow(values.at(1),2)-7,2);};
     mathFuncMap["Matyas_function"] = [](domainVector values){
         if(-10>values.front() || values.front()>10 || -10>values.back() || values.back()>10) throw invalid_argument("Inputs x,y values must be higher or equal -10 and equal or lower than 10");
@@ -186,20 +187,42 @@ int main(int argc, char** argv){
     try{
         //create vector with results for selected math function and execution function
         //results = finalResult(executionFuncMap.at(inputValues.at(1)), inputValues, mathFuncMap);
-        cout << inputValues.at(2) << endl;
-        cout << "-------------------------------------------------------------------------------------------------------" << endl;
-        cout << "BruteForce:" << endl;
-      vector<double> results1 = finalResult(executionFuncMap.at("BruteForce"), inputValues, mathFuncMap);
-        printResults(results1);
-        cout << "-------------------------------------------------------------------------------------------------------" << endl;
-        cout << "Climb:" << endl;
-      vector<double> results2 = finalResult(executionFuncMap.at("Climb"), inputValues, mathFuncMap);
-        printResults(results2);
-        cout << "-------------------------------------------------------------------------------------------------------" << endl;
-        cout << "Annealing:" << endl;
-      vector<double> results3 = finalResult(executionFuncMap.at("Annealing"), inputValues, mathFuncMap);
-        printResults(results3);
 
+        double bruteForceSum = 0;
+        double climbSum = 0;
+        double annealingSum = 0;
+        double bruteForceTime = 0;
+        double climbTime = 0;
+        double annealingTime = 0;
+
+        for(int i = 0; i < 25; i++){
+            cout << inputValues.at(2) << endl;
+            cout << "-------------------------------------------------------------------------------------------------------" << endl;
+            cout << "BruteForce:" << endl;
+            vector<double> results1 = finalResult(executionFuncMap.at("BruteForce"), inputValues, mathFuncMap);
+            printResults(results1);
+            bruteForceSum += results1.at(2);
+            bruteForceTime += results1.at(3);
+            cout << "-------------------------------------------------------------------------------------------------------" << endl;
+            cout << "Climb:" << endl;
+            vector<double> results2 = finalResult(executionFuncMap.at("Climb"), inputValues, mathFuncMap);
+            printResults(results2);
+            climbSum += results2.at(2);
+            climbTime += results2.at(3);
+            cout << "-------------------------------------------------------------------------------------------------------" << endl;
+            cout << "annealing:" << endl;
+            vector<double> results3 = finalResult(executionFuncMap.at("Annealing"), inputValues, mathFuncMap);
+            printResults(results3);
+            annealingSum += results3.at(2);
+            annealingTime += results3.at(3);
+        }
+        cout << endl << "Iterations: " << inputValues.at(7) << endl;
+        cout <<  "Avarage sum for BruteForce: " << bruteForceSum/25 << endl;
+        cout << "Avarage time for BruteForce: " << bruteForceTime/25 << endl;
+        cout << "Avarage sum for Climb: " << climbSum/25 << endl;
+        cout << "Avarage time for Climb: " << climbTime/25 << endl;
+        cout << "Avarage sum for Annealing: " << annealingSum/25 << endl;
+        cout << "Avarage time for Annealing: " << annealingTime/25 << endl;
     }catch(out_of_range e) {
         cout << "Available functions:" << endl;
         cout << "Matyas function(-10<=x,y<10)" << endl;

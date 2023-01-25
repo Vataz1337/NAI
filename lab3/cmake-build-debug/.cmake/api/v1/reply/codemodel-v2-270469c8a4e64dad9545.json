@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.24"
+						"string" : "3.23"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Desktop/Studia/Semestr 5/NAI/lab3/cmake-build-debug",
-		"source" : "D:/Desktop/Studia/Semestr 5/NAI/lab3"
+		"build" : "C:/Users/patry/OneDrive/Pulpit/Studia/Semestr5/NAI/lab3/cmake-build-debug",
+		"source" : "C:/Users/patry/OneDrive/Pulpit/Studia/Semestr5/NAI/lab3"
 	},
 	"version" : 
 	{
