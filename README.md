@@ -1,3 +1,2 @@
 # NAI
-LAB3:
-Z przetestowanych algorytmów optymalizacji funkcji tz(algorytmu pełneglo przeglądu, algorytmu wspinaczkowego i algorytmu powolnego wypalania) najefektywniejszym w znajdowaniu najmniejszej wartości dla danej funkcji okazał się algorrytm wypalania. Łączy on w sobie cechy jego konkurentów. Umożliwia on jednocześnie znalezienie optimum w funkcjach posiadających optuma lokalne(coś z czym algorytm wspinaczkowy sobie nie radzi) oraz działa bardziej optymalnie w porównaniu do algorytmu pełnego przeglądu, ponieważ ogranicza przestrzeń poszukiwań do pewnych przedziałów eliminując niepotrzebne kalkulacje.
+
