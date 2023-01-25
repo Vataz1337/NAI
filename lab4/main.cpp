@@ -3,6 +3,7 @@
 #include <string>
 #include <random>
 #include <algorithm>
+#include <set>
 
 
 using namespace std;
@@ -253,26 +254,27 @@ vector<Data> tournament(const vector<Data>& data, int group_size, int number_of_
     vector<Data> winners;
     vector<Data> group;
     vector<int> used;
-    for(int j = 0; j < number_of_winners; j++){
+    int counter = 0;
+    while(winners.size() < number_of_winners){
+        Data biggest;
+        group.clear();
+        used.clear();
         while(group.size() < group_size) {
-            std::uniform_int_distribution<int> distribution(0, int(data.size()));
+            uniform_int_distribution<int> distribution(0, int(data.size()));
             int random_element_group = distribution(rng);
-            if (std::find(used.begin(), used.end(), random_element_group) == used.end()) {
+            if (find(used.begin(), used.end(), random_element_group) == used.end()) {
                 used.push_back(random_element_group);
                 group.push_back(data.at(random_element_group));
             }
         }
-        Data biggest;
-        int counter = 0;
-        for(int i = 1; i < group_size; i++){
+        biggest.result = 0;
+        biggest.population = {};
+        biggest.allBits = {};
+        for(int i = 0; i < group_size; i++){
             counter++;
-            Data a = group.at(i);
-            cout << "Candidate " << counter << ": " << a.result << endl;
-            
-            Data b = group.at(i);
-            cout << "Candidate " << counter+1 << ": " << b.result << endl;
-            if(a.result > b.result && a.result > biggest.result) biggest = a;
-            else if(b.result > a.result && b.result > biggest.result) biggest = b;
+            Data temp = group.at(i);
+            cout << "Candidate " << counter << ": " << temp.result << endl;
+            if(temp.result > biggest.result) biggest = temp;
         }
         winners.push_back(biggest);
     }
