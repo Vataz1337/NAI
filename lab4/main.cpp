@@ -248,24 +248,50 @@ Data two_point_crossover(const Data& parent1,const Data& parent2, int cross_poin
     return child;
 }
 
-Data tournament(const vector<Data>& data, int group_size, int number_of_winners){
+vector<Data> tournament(const vector<Data>& data, int group_size, int number_of_winners) {
+    cout << "Tournament" << endl;
     vector<Data> winners;
     vector<Data> group;
-    for(int i = 0; i < group_size; i++){
-        std::uniform_int_distribution<int> distribution(0, data.size());
-        int randomNumber = distribution(rng);
+    vector<int> used;
+    for(int j = 0; j < number_of_winners; j++){
+        while(group.size() < group_size) {
+            std::uniform_int_distribution<int> distribution(0, int(data.size()));
+            int random_element_group = distribution(rng);
+            if (std::find(used.begin(), used.end(), random_element_group) == used.end()) {
+                used.push_back(random_element_group);
+                group.push_back(data.at(random_element_group));
+            }
+        }
+        Data biggest;
+        int counter = 0;
+        for(int i = 1; i < group_size; i++){
+            counter++;
+            Data a = group.at(i);
+            cout << "Candidate " << counter << ": " << a.result << endl;
+            
+            Data b = group.at(i);
+            cout << "Candidate " << counter+1 << ": " << b.result << endl;
+            if(a.result > b.result && a.result > biggest.result) biggest = a;
+            else if(b.result > a.result && b.result > biggest.result) biggest = b;
+        }
+        winners.push_back(biggest);
     }
+    return winners;
 }
+
+
 
 int main() {
     vector<Data> sorted = fitness(populate(100));
     print_results(sorted);
     cout << endl << "Survivors: " << endl << endl;
-    print_results(naturalSelection(sorted));
+    vector<Data>  sortedArray = naturalSelection(sorted);
+    print_results(sortedArray);
     printChromos(x_Point_mutation(sorted[0], 3).allBits);
     printChromos(uniform_mutation(sorted[0], 5).allBits);
     cross_mutation(sorted[0], sorted[1]);
     two_point_crossover(sorted[0], sorted[1], 2,10);
+    print_results(tournament(sortedArray, 5, 10));
 //    cout << beale_function(1.15254, -1.11111);
     ///99992.8
     return 0;
